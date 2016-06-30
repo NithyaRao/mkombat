@@ -41,7 +41,7 @@ class FightDisplay extends React.Component {
                    <img src={this.props.weapons[0].image} className="img-circle" style={{width:'104'},{height:'110'}}/>
                 </div>
                 <div class="progress">
-                   <div className="progress-bar progress-bar-success" id='bar1' style={{width: this.props.creatures[1].health + '%'}} >
+                   <div className="progress-bar progress-bar-success" id={this.props.creatures[0]._id} style={{width: this.props.creatures[0].health + '%'}} >
                      {this.props.creatures[0].health}
                    </div>
                 </div>
@@ -60,7 +60,7 @@ class FightDisplay extends React.Component {
                </div>
              </div>
              <div class="progress">
-                <div className="progress-bar progress-bar-success" id='bar2' style={{width: this.props.creatures[1].health + '%'}} >
+                <div className="progress-bar progress-bar-success" id= {this.props.creatures[1]._id} style={{width: this.props.creatures[1].health + '%'}} >
                   {this.props.creatures[1].health}
                 </div>
               </div>

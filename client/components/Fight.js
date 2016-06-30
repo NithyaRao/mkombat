@@ -41,8 +41,12 @@ class Fight extends React.Component {
      console.log(attacker[0].name, ' hits, damage: ', damage, defender[0].name, ' hew health: ', defender[0].health - damage);
      defender[0].health -= damage;
 
-    document.getElementById('bar1').innerHTML = defender[0].health < 0 ? 0 : defender[0].health;
+    let progressbar = document.getElementById(defender[0]._id);
+    progressbar.innerHTML = defender[0].health < 0 ? 0 : defender[0].health;
 
+    progressbar.style.width = defender[0].health < 0 ? 0 : defender[0].health + "%";
+    // document.getElementById(defender[0]._id).innerHTML = defender[0].health < 0 ? 0 : defender[0].health;
+    console.log('element is ', document.getElementById(defender[0]._id));
      if (defender[0].health > 0) {
        setTimeout(() => {
          this.subtractHealth(defender, attacker);
