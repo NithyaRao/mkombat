@@ -11,7 +11,6 @@ export default class App extends React.Component {
           <li><Link to="/CreatureList">Creature List</Link></li>
           <li><Link to="/AddWeapon">Add Weapon</Link></li>
           <li><Link to="/Fight">Fight</Link></li>
-          <li><Link to="/CreaturePick">Fight1</Link></li>
         </ul>
         {this.props.children}
       </div>

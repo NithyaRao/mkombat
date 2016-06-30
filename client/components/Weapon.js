@@ -13,7 +13,7 @@ class Weapon extends React.Component {
     .then(r => r.json())
     .then(j => {
 
-      console.log('attack values', j);  debugger;
+      console.log('attack values', j); 
       this.setState({ attack: j.values.values });
     });
   }

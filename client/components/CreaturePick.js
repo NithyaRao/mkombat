@@ -41,18 +41,17 @@ class CreaturePick extends React.Component {
     console.log('Inside creaturepick', this.props);
     return (
        <div>
-         <h1>Pick a Creature</h1>
          <form>
            <div className='form-group'>
             <label>Creature Name</label>
-            <select className='form-control' ref='creature1'>
-              {this.props.creatures.map((c, i) => <option key={c._id}>{c.name}</option>)}
+            <select className='form-control' ref='creature'>
+              {this.props.creatures.map((c, i) => <option value={c._id} key={c._id}>{c.name}</option>)}
             </select>
           </div>
           <div className='form-group'>
             <label>Weapon </label>
-            <select className='form-control' ref='weapon1'>
-              {this.props.weapons.map((w, i) => <option key={w._id}>{w.name}</option>)}
+            <select className='form-control' ref='weapon'>
+              {this.props.weapons.map((w, i) => <option value={w._id} key={w._id}>{w.name}</option>)}
             </select>
           </div>
        </form>
